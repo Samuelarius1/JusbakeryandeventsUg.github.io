@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jusbakery - Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'baskerville old face';
+            margin: 0;
+            padding: 0;
+            background-color: rgb(167, 108, 1);
+            color: #000000;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #1a1a1a;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #9c6644;
+        }
+
+        /* Main Container Styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Contact Section Styles */
+        #contact {
+            background-color: #ebebeb;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-img {
+            margin-bottom: 20px;
+        }
+
+        .contact-welcome {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .order-now {
+            margin-top: 40px;
+        }
+
+        .order-now img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .contact-buttons {
+            margin-top: 20px;
+        }
+
+        .contact-buttons img {
+            max-width: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .contact-buttons img:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jusbakery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.htm">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="SERVICES.HTML">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="sign up.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container contact-content">
+                <div class="contact-img">
+                    <img src="cc.png" alt="Contact Image" class="img-fluid">
+                </div>
+                <div class="contact-welcome">
+                    Welcome, 'BlissfulBitesCollective' <br> Connect with Jus for your order.
+                </div>
+                <div class="order-now">
+                    <img src="od.png" alt="Order Now" onclick="redirectToOrderPage()">
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/message/XR2X3W7MTSK3F1= + 256 789 891118" target="_blank">
+                        <img src="wf.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://l.instagram.com/?u=http%3A%2F%2Fjusbakeryandevents1ug.com%2F&e=AT3dUCe1FWqrLS4wL2ZspzGt6CApi4-6dA3da2J-K55H811Klr4jAyup8gygMUddstNudTnaU-2aQb8CIL0_7vye8eqs3iGGZ1abdKc" target="_blank">
+                        <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram">
+                    </a>
+                    <a href="tel:+256 789 891118">
+                        <img src="PHONE.png" alt="Phone">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Jusbakery. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
+    <script>
+        function redirectToOrderPage() {
+            // Implement the function to redirect to the order page
+            window.location.href = "order.html";
+        }
+    </script>
+</body>
+
+</html>

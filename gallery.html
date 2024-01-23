@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jusbakery - Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'baskerville old face';
+            margin: 0;
+            padding: 0;
+            background-color: #f9efe9;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #1a1a1a;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #9c6644;
+        }
+
+        /* Main Container Styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+       /* Gallery Section Styles */
+#gallery {
+    background-color: #dfac07;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-images img {
+    max-width: 100%; /* Adjusted to take the full width */
+    max-height: 250px; /* Adjusted to set a maximum height */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+}
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jusbakery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.htm">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="SERVICES.HTML">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="sign up.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <h2>Our Gallery</h2>
+                <div class="gallery-images">
+                    <img src="c 1.jpg" alt="Gallery Image 1">
+                    <img src="c 2.jpg" alt="Gallery Image 2">
+                    <img src="c 4.jpg" alt="Gallery Image 4">
+                    <img src="c 3.jpg" alt="Gallery Image 3">
+                    <img src="c 5.jpg" alt="Gallery Image 5">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Jusbakery. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap and other scripts... -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Jus Bakery and Events Uganda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'BASKERVILLE OLD FACE';
+            background-color: #ffeecc; /* Baking-themed background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #signup-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+        }
+
+        #signup-form {
+            padding: 20px;
+        }
+
+        #signup-form h2 {
+            text-align: center;
+            color: #d9534f; /* Red color for a baking touch */
+        }
+
+        #signup-form label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        #signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+        }
+
+        #signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f; /* Red color for a baking touch */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #signup-form button:hover {
+            background-color: #c9302c; /* Darker red on hover */
+        }
+
+        #signup-form p {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #signup-form a {
+            color: #d9534f;
+            text-decoration: none;
+        }
+
+        #signup-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body background="sign up.jpg">
+    <div id="signup-container">
+        <form id="signup-form">
+            <h2>Create your account with Jus Bakery</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+
+            <button type="button" onclick="signup()" class="btn btn-danger">Sign Up</button>
+
+            <p>Already have an account? <a href="" class="text-danger">Sign In</a></p>
+            <li class="nav-item"><a class="nav-link" href="index.htm">Home</a></li>
+        </form>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        function signup() {
+            // Get form data
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send data to the server
+            $.ajax({
+                type: 'POST',
+                url: '/signup',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({ username, email, password }),
+                success: function (result) {
+                    alert(result);
+                },
+                error: function (error) {
+                    alert('Error: ' + JSON.stringify(error));
+                }
+            });
+        }
+        // server.js
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Connect to MongoDB (Make sure to replace 'your-mongodb-uri' with your actual MongoDB connection URI)
+mongoose.connect('your-mongodb-uri', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Create a mongoose model for users
+const User = mongoose.model('User', {
+    username: String,
+    email: String,
+    password: String
+});
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+
+// Routes
+app.post('/signup', async (req, res) => {
+    try {
+        const { username, email, password } = req.body;
+
+        // Check if the username or email already exists
+        const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+        if (existingUser) {
+            return res.status(400).send('Username or email already exists.');
+        }
+
+        // Create a new user
+        const newUser = new User({ username, email, password });
+        await newUser.save();
+
+        // Send a success message
+        res.status(201).send('User registered successfully.');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+    </script>
+    
+</body>
+
+</html>

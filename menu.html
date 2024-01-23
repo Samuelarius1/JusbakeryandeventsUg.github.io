@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jusbakery - Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'baskerville old face';
+            margin: 0;
+            padding: 0;
+            background-color: #f9efe9;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #1a1a1a;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #9c6644;
+        }
+
+        /* Main Container Styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Menu Section Styles */
+        #menu {
+            background-color: #ebebeb;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 40px;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #9c6644;
+            margin-bottom: 10px;
+        }
+
+        .item-description {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .ingredient-table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        .ingredient-table th,
+        .ingredient-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .order-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #9c6644;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .order-button:hover {
+            background-color: #74503e;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jusbakery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.htm">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="SERVICES.HTML">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="sign up.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <!-- Cake Item 1 -->
+                <div class="menu-item">
+                    <img src="path/to/cake1.jpg" alt="Cake 1">
+                    <div class="item-title">Deluxe Chocolate Cake</div>
+                    <div class="item-description">Decadent chocolate layers with rich chocolate ganache.</div>
+                    <table class="ingredient-table">
+                        <tr>
+                            <th>Ingredients</th>
+                        </tr>
+                        <tr>
+                            <td>Chocolate</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar</td>
+                        </tr>
+                        <tr>
+                            <td>Butter</td>
+                        </tr>
+                        <tr>
+                            <td>Flour</td>
+                        </tr>
+                    </table>
+                    <a href="#" class="order-button">Order Now</a>
+                </div>
+
+                <!-- Cake Item 2 -->
+                <div class="menu-item">
+                    <img src="path/to/cake2.jpg" alt="Cake 2">
+                    <div class="item-title">Strawberry Bliss Cake</div>
+                    <div class="item-description">Fresh strawberries layered with fluffy whipped cream.</div>
+                    <table class="ingredient-table">
+                        <tr>
+                            <th>Ingredients</th>
+                        </tr>
+                        <tr>
+                            <td>Strawberries</td>
+                        </tr>
+                        <tr>
+                            <td>Cream</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar</td>
+                        </tr>
+                        <tr>
+                            <td>Flour</td>
+                        </tr>
+                    </table>
+                    <a href="#" class="order-button">Order Now</a>
+                </div>
+
+                <!-- Add more cake items as needed -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Jusbakery. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap and other scripts... -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

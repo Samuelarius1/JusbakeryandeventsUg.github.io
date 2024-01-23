@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jusbakery - Artisan Baked Goods and Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'baskerville old face';
+            margin: 0;
+            padding: 0;
+            background-color: #f9efe9;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #1a1a1a;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #9c6644;
+        }
+
+        /* Main Container Styles */
+        .main-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Left Sidebar Styles */
+        .left-sidebar {
+            background-color: #fd620194;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .left-sidebar img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .order-btn {
+            background-color: #74503e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .order-btn:hover {
+            background-color: #59392e;
+        }
+
+        .nav-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .nav-links a:hover {
+            background-color: #8f735b;
+        }
+
+        /* Content Styles */
+        .content {
+            flex: 1;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #9c6644;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        /* Gallery Section Styles */
+        #gallery {
+            background-color: #f5f5f5;
+            padding: 50px 0;
+        }
+
+        #gallery .row {
+            margin: -10px;
+        }
+
+        #gallery img {
+            width: calc(300% - 20px);
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #gallery video {
+            width: 100%;
+            max-width: 640px;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* About Section Styles */
+        #about {
+            background-color: #ebebeb;
+            padding: 50px 0;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 1.25rem;
+        }
+
+        /* Services Section Styles */
+        #services {
+            background-color: #f5f5f5;
+            padding: 50px 0;
+        }
+
+        .service-item h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section Styles */
+        #testimonials {
+            background-color: #ebebeb;
+            padding: 50px 0;
+        }
+
+        .blockquote {
+            font-size: 1.5rem;
+            margin: 0 0 20px;
+        }
+
+        .blockquote-footer {
+            font-size: 1rem;
+            color: #9c6644;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jusbakery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="SERVICES.HTML">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact us.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="sign up.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <img src="logo.jpg" alt="Logo" style="width: 80px; margin-bottom: 20px;">
+            <div class="profile-info">
+                <img src="Snapchat-15147175.jpg" alt="Profile Image">
+                <p>Samuel</p>
+            </div>
+            <button class="order-btn" <a href="contact us.html">Place Order</button>
+            <div class="nav-links">
+                <a href="index.htm">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact us.html">Contact</a>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Header -->
+            <header class="text-center text-white">
+                <div class="hero">
+                    <h1>Welcome to Jusbakery</h1>
+                    <p>Indulge in the Art of Baking and Events in Kyaliwajjala</p>
+                </div>
+            </header>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="py-5">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="IMG-20240116-WA0115.jpg" alt="Gallery Image 1" class="img-fluid">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="IMG-20240116-WA0120.jpg" alt="Gallery Image 2" class="img-fluid">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="IMG-20240115-WA0052.jpg" alt="Gallery Image 3" class="img-fluid">
+                        </div>
+                    </div>
+                    <video width="640" height="360" controls class="mt-4">
+                        <source src="WhatsApp Video 2024-01-21 at 13.15.14_7b7c82cf.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-5 bg-light">
+                <div class="container text-center">
+                    <div class="about-content">
+                        <h2>About Jusbakery</h2>
+                        <p>Discover the artistry and passion behind Jusbakery, where every creation tells a unique story. Our dedication to quality and taste sets us apart, making every bite a delightful experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-5">
+                <div class="container text-center">
+                    <div class="services-content">
+                        <h2>Our Services</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="IMG-20240116-WA0116.jpg" alt="Custom Cakes" class="img-fluid">
+                                    <h3>Custom Cakes</h3>
+                                    <p>Bespoke cakes designed to make your special moments truly memorable.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="service-item">
+                                    <img src="IMG-20240115-WA0024.jpg" alt="Event Catering" class="img-fluid">
+                                    <h3>Event Catering</h3>
+                                    <p>Elevate your events with our exquisite catering services, tailored to your preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="py-5 bg-light">
+                <div class="container text-center">
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Jusbakery's creations are not just delicious; they're a work of art. Every bite is a moment of pure joy."</p>
+                            <footer class="blockquote-footer">Happy Customer</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section> 
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Jusbakery. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
